@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/scandy1"
+    tools:context=".SelectionActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/loanlogo" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="168dp"
+        android:text="ZenLoan"
+        android:textColor="#1B2131"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:text="Select the Type of Loan"
+        android:textColor="#1B2131"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="212dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/personalBtn"
+            android:layout_width="166dp"
+            android:layout_height="60dp"
+            android:layout_gravity="top"
+            android:layout_margin="10dp"
+            android:backgroundTint="#1B2131"
+            android:onClick="personalLoan"
+            android:text="Personal Loan"
+            android:textColor="#E2CBC3" />
+
+        <Button
+            android:id="@+id/housingBtn"
+            android:layout_width="166dp"
+            android:layout_height="60dp"
+            android:layout_gravity="top"
+            android:layout_margin="10dp"
+            android:backgroundTint="#1B2131"
+            android:gravity="center"
+            android:onClick="housingLoan"
+            android:text="Housing Loan"
+            android:textColor="#E2CBC3" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

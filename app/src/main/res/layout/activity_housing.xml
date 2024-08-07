@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/scandy2"
+    tools:context=".HousingActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="168dp"
+        android:text="ZenLoan"
+        android:textColor="#1F2C3F"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:text="Housing Loan"
+        android:textColor="#1F2C3F"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/loanlogo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="390dp"
+        android:layout_height="320dp"
+        android:layout_marginBottom="135dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="5dp"
+            android:textColorHint="#1F2C3F"
+            app:boxStrokeColor="#CDAFAF"
+            app:hintTextColor="#1F2C3F">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextLoanAmountHousing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Loan Amount"
+                android:inputType="numberDecimal"
+                android:textColorHint="#CDAFAF" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="5dp"
+            android:textColorHint="#1F2C3F"
+            app:boxStrokeColor="#CDAFAF"
+            app:hintTextColor="#1F2C3F">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextInterestRateHousing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Interest Rate (per annum)"
+                android:inputType="numberDecimal"
+                android:textColorHint="#CDAFAF" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="5dp"
+            android:textColorHint="#1F2C3F"
+            app:boxStrokeColor="#CDAFAF"
+            app:hintTextColor="#1F2C3F">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextNumRepaymentsHousing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number of Repayments (in months)"
+                android:inputType="number"
+                android:textColorHint="#CDAFAF" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="5dp"
+            android:textColorHint="#1F2C3F"
+            app:boxStrokeColor="#CDAFAF"
+            app:hintTextColor="#1F2C3F">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextStartDateHousing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Start Date (YYYY/MM/DD)"
+                android:inputType="date"
+                android:textColorHint="#CDAFAF" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonCalculateHousing"
+            android:layout_width="344dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="162dp"
+            android:layout_marginEnd="161dp"
+            android:layout_marginBottom="128dp"
+            android:backgroundTint="#1F2C3F"
+            android:text="Calculate"
+            android:textColor="#CDAFAF" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="351dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textViewMonthlyInstalmentHousing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="Monthly Instalment: "
+            android:textColor="#1F2C3F"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewLastPaymentDateHousing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last Payment Date: "
+            android:textColor="#1F2C3F"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewTotalRepaidHousing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Amount Repaid: "
+            android:textColor="#1F2C3F"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonShowAmortizationHousing"
+        android:layout_width="344dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="34dp"
+        android:backgroundTint="#1F2C3F"
+        android:text="Show Amortization Schedule"
+        android:textColor="#CDAFAF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
